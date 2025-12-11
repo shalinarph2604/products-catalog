@@ -1,73 +1,120 @@
-# React + TypeScript + Vite
+# 🛒 MagangHub Mini Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project ini adalah mini assignment untuk proses rekrutmen MagangHub. Aplikasi dibangun menggunakan **React.js**, **Vite**, dan **Tailwind CSS**, dengan konsumsi data dari API publik **DummyJSON**.
 
-Currently, two official plugins are available:
+Aplikasi menampilkan katalog produk lengkap dengan gambar, judul, deskripsi, harga, rating, dan status ketersediaan stok.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **React.js (Vite)** – Frontend framework
+* **Tailwind CSS** – Styling utility-first
+* **JavaScript / TypeScript (opsional)**
+* **DummyJSON API** – Sumber data produk
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Fitur Utama
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Fetch data produk dari API: `https://dummyjson.com/products`
+* Menampilkan daftar produk dalam bentuk katalog grid
+* UI responsif (mobile & desktop)
+* Menampilkan elemen produk:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  * Gambar
+  * Judul
+  * Deskripsi
+  * Harga
+  * Rating (bintang)
+  * Badge "Low Stock" jika stok menipis
+* Hover effect dan tampilan modern menggunakan Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠 Cara Menjalankan Project
+
+### 1. Clone repository
+
+```
+git clone https://github.com/USERNAME/REPO.git
+cd REPO
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+npm install
+```
+
+### 3. Jalankan aplikasi
+
+```
+npm run dev
+```
+
+Aplikasi akan berjalan di:
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 🌐 API Endpoint
+
+Data diambil dari DummyJSON:
+
+```
+GET https://dummyjson.com/products
+```
+
+Contoh data produk:
+
+* id
+* title
+* description
+* images
+* price
+* availabilityStatus
+* rating
+
+---
+
+## 🖼 Preview UI
+
+Tampilan sederhana katalog produk dengan kartu responsif dan badge status stok.
+
+Jika deployed, link demo dapat ditambahkan di sini:
+
+```
+https://your-domain.vercel.app
+```
+
+---
+
+## 📁 Struktur Folder
+
+```
+project-folder/
+│── src/
+│   ├── App.jsx
+│   ├── components/
+│   ├── index.css
+│── public/
+│── package.json
+│── vite.config.js
+│── README.md
+```
+
+---
+
+## 🙋‍♀️ Tentang Developer
+
+Project ini dikerjakan oleh **Shalina Arpheliasari** untuk kebutuhan proses rekrutmen MagangHub.
+
+Jika ada catatan, feedback, atau revisi yang diperlukan, saya terbuka untuk melakukan perbaikan.
+
+---
+
+Terima kasih 🙏
