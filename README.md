@@ -10,7 +10,7 @@ Aplikasi menampilkan katalog produk lengkap dengan gambar, judul, deskripsi, har
 
 * **React.js (Vite)** – Frontend framework
 * **Tailwind CSS** – Styling utility-first
-* **JavaScript / TypeScript (opsional)**
+* **TypeScript**
 * **DummyJSON API** – Sumber data produk
 
 ---
@@ -28,6 +28,7 @@ Aplikasi menampilkan katalog produk lengkap dengan gambar, judul, deskripsi, har
   * Harga
   * Rating (bintang)
   * Badge "Low Stock" jika stok menipis
+  * Lama pengiriman
 * Hover effect dan tampilan modern menggunakan Tailwind CSS
 
 ---
